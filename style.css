@@ -1,0 +1,437 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --color-primary: #4CAF50; /* Verde */
+    --color-secondary: #FFC107; /* Amarelo */
+    --color-tertiary: #A5D6A7; /* Verde claro */
+    --color-dark: #263238; /* Cinza escuro */
+    --color-light: #ECEFF1; /* Cinza claro */
+    --color-white: #FFFFFF;
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Seções */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--color-primary);
+}
+
+/* Componentes */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    font-size: 1.1rem;
+}
+
+.btn--primary:hover {
+    background-color: #ffb300;
+    transform: translateY(-3px);
+}
+
+.btn--secondary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1.1rem;
+}
+
+.btn--secondary:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+}
+
+/* Header */
+.header {
+    background-color: var(--color-white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--color-primary);
+}
+
+.nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-tertiary);
+    color: var(--color-dark);
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero__question {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Problemas Section */
+.problemas {
+    background-color: var(--color-white);
+}
+
+.problemas__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.problemas__item {
+    background-color: var(--color-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.problemas__item-title {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* Benefícios Section */
+.beneficios__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.beneficios__item {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.beneficios__text strong {
+    color: var(--color-primary);
+}
+
+/* Depoimentos Section */
+.depoimentos {
+    background-color: var(--color-tertiary);
+}
+
+.depoimentos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.depoimento__card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.depoimento__text {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.depoimento__author {
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+/* Garantia Section */
+.garantia {
+    background-color: var(--color-white);
+}
+
+.garantia__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.garantia__box {
+    background-color: var(--color-light);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+}
+
+.garantia__box h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.garantia__box--destaque {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.garantia__box--destaque h3 {
+    color: var(--color-secondary);
+}
+
+.garantia__list {
+    list-style: none;
+    text-align: left;
+}
+
+.garantia__list li {
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: var(--color-tertiary);
+}
+
+.faq__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq__item {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq__question {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* CTA Final */
+.cta-final {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-final__title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta-final__text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries (Responsividade) */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        flex-grow: 1;
+        text-align: left;
+    }
+    
+    .nav {
+        flex-basis: 100%;
+        margin-top: 20px;
+        text-align: center;
+        display: none; /* Esconde o menu por padrão */
+    }
+
+    .nav.is-open {
+        display: block; /* Mostra o menu quando a classe 'is-open' está presente */
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin: 10px 0;
+    }
+
+    .nav__toggle {
+        display: block; /* Mostra o botão do menu hamburguer */
+    }
+
+    .nav__toggle-icon {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--color-dark);
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .nav__toggle-icon::before,
+    .nav__toggle-icon::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--color-dark);
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+
+    .nav__toggle-icon::before {
+        top: -8px;
+    }
+
+    .nav__toggle-icon::after {
+        top: 8px;
+    }
+    
+    .nav__toggle.is-open .nav__toggle-icon {
+        background: transparent;
+    }
+
+    .nav__toggle.is-open .nav__toggle-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    
+    .nav__toggle.is-open .nav__toggle-icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .hero__title {
+        font-size: 2.2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section__title {
+        font-size: 2rem;
+    }
+
+    .garantia__content {
+        flex-direction: column;
+    }
+}
